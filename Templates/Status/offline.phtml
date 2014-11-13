@@ -1,0 +1,19 @@
+<?php $randomPlayerList = rand(0, 10000); ?>
+<?php $randomPlugin = rand(0, 10000); ?>
+<?php echo $args['before_widget']; ?>
+<?php echo $args['before_title'] . $instance['title'] . $args['after_title']; ?>
+<p>
+    <?php if (isset($instance['show_statu']) && $instance['show_status'] == 'on'): ?>
+    Status: <span style="color:re;font-weight:bold">Offline</span><br>
+    <?php endif; ?>
+
+    <?php if (isset($instance['show_host']) && $instance['show_host'] == 'on'): ?>
+    Host: <strong><?php echo $instance['host']; ?></strong><br>
+    <?php endif; ?>
+
+    <?php if (isset($instance['show_port']) && $instance['show_port']): ?>
+    Port: <strong><?php echo $instance['port']; ?></strong><br>
+    <?php endif; ?>
+</p>
+
+<?php echo $args['after_widget']; ?>
